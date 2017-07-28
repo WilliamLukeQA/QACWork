@@ -1,0 +1,13 @@
+import java.awt.*;
+import java.awt.event.*;
+
+	public class Event2 implements ActionListener{
+	TextField x;
+	
+	public Event2(TextField t){
+		x = t;
+	}
+	public void actionPerformed(ActionEvent t){ 
+		x.setText("Hello");
+	}	
+}
