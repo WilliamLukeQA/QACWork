@@ -1,0 +1,60 @@
+
+public class Checkout {
+	
+	public static void main (String x[]){
+		float bill,paid,change;
+
+		bill = 10.50f;
+		paid = 50;
+		
+		change = paid-bill;
+		
+		 int return50 = (int) change / 50;
+		 System.out.println("£50=" + return50);
+		 change = change -  (return50 * 50);
+		 
+		 int return20 = (int) change / 20;
+		 System.out.println("£20=" + return20);
+		 change = change -  (return20 * 20);
+		 
+		 int return10 = (int) change / 10;
+		 System.out.println("£10=" + return10);
+		 change = change -  (return10 * 10);
+		 
+		 int return5 = (int) change / 5;
+		 System.out.println("£5=" + return5);
+		 change = change -  (return5 * 5);
+		 
+		 int return2 = (int) change / 2;
+		 System.out.println("£2=" + return2);
+		 change = change -  (return2 * 2);
+		 
+		 int return1 = (int) change / 1;
+		 System.out.println("£1=" + return1);
+		 change = change -  (return1 * 1);
+		 
+		 int return50p = (int) (change / 0.5);
+		 System.out.println("50p=" + return50p);
+		 change = change - (return50p * 0.5f);
+		 
+		 int return20p = (int) (change / 0.2);
+		 System.out.println("20p=" + return20p);
+		 change = change - (return20p * 0.2f);
+		 
+		 int return10p = (int) (change / 0.1);
+		 System.out.println("10p=" + return10p);
+		 change = change - (return10p * 0.1f);
+		 
+		 int return5p = (int) (change / 0.05);
+		 System.out.println("5p=" + return5p);
+		 change = change - (return5p * 0.5f);
+		 
+		 int return2p = (int) (change / 0.02);
+		 System.out.println("2p=" + return50p);
+		 change = change - (return2p * 0.02f);
+		 
+		 int return1p = (int) (change / 0.01);
+		 System.out.println("£1p=" + return50p);
+		 change = change - (return1p * 0.01f);
+	}
+}
