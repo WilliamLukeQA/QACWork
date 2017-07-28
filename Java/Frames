@@ -1,0 +1,19 @@
+import java.awt.*;
+
+public class Windows {
+	public static void main(String x[]){
+		Frame Win = new Frame();
+		TextField T1 = new TextField();
+		Button B1 = new Button("Click");
+		
+		Event2 e = new Event2(T1);
+		B1.addActionListener(e);
+		
+		Win.add(T1,BorderLayout.NORTH);
+		Win.add(B1,BorderLayout.CENTER);
+		Win.setSize(300,500);
+		Win.setVisible(true);
+			
+		
+	}
+}
