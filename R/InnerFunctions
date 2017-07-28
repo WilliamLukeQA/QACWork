@@ -1,0 +1,38 @@
+Add <- function(a,b){
+  c = a + b
+  return(c)
+}
+
+#---------------------------------------------------------------------------
+
+print(Add(10,5))
+
+f <- function(){
+  x <- function(a,b){
+    c = a + b
+    b = cat("Result: ", c)
+    return(b)
+  }
+}
+
+luke = f()
+luke(2,7)
+
+#-----------------------------------------------------------------------
+
+rich <- "Hey"
+glob <- function(){
+  print(rich)
+  rich <<- "Hello"
+  inner <- function(){
+    rich <<- "Hi"
+    print(rich)
+  }
+print(rich)  
+}
+print(rich)
+
+glob()
+
+
+
