@@ -1,0 +1,13 @@
+import java.util.Arrays;
+
+public class Stack2 {
+	public static void  main (String x[]){
+	float[] array1 = new float [4];
+	array1[0] = 5;
+	array1[1] = 10;
+	array1[2] = 20;
+	array1[3] = 15;
+	
+	}
+
+}
