@@ -1,0 +1,15 @@
+
+public class Cons {
+	
+	public Cons(int a){
+		System.out.println(a);
+	}
+	public Cons(int a,int b){
+		this(a);
+		System.out.println(a + b);
+	}
+	public Cons(int a,int b,int c){
+		this(a,b);
+		System.out.println(a + b + c);
+	}
+}
