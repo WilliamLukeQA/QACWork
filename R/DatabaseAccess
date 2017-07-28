@@ -1,0 +1,8 @@
+#install.packages("RODBC")
+require(RODBC)
+
+conn <- odbcConnect("accessodbc", uid="root", pwd="password")
+
+df <- sqlQuery(conn,"select * from testing")
+
+print(df)
