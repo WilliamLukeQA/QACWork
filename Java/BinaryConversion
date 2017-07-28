@@ -1,0 +1,20 @@
+
+public class BinaryConversion {
+	
+	public static void main (String x[]){
+
+		String binaryout = "";
+		int number = 0;
+		for (number =10;number > 0;){
+			if (number % 2 > 0){
+				binaryout = "1" + binaryout;
+			}
+			else {
+				binaryout = "0" + binaryout;
+			}
+			number = number /2;
+		}
+		System.out.println(binaryout);
+	}
+}
+ 
