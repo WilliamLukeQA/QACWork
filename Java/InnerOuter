@@ -1,0 +1,24 @@
+
+public class Outer_Demo {
+	int num;
+	
+	private class Inner_Demo {
+		public void print(){
+			System.out.println("Inner Class");
+		}
+	}
+	
+	void display_inner(){
+		Inner_Demo inner = new Inner_Demo();
+		inner.print();
+	}
+
+
+	public static class my_class {
+		public static void main(String x[]){
+			Outer_Demo out = new Outer_Demo();
+			out.display_inner();
+	}
+	}
+
+}
