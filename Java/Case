@@ -1,0 +1,20 @@
+
+public class case1 {
+
+	public static void main (String k[]){
+		int month = 2;
+		String monthswitch;
+		switch (month) {
+		case 1: monthswitch = "January";
+		break;
+		case 2: monthswitch = "February";
+		break;
+		default: monthswitch = "Invalid";
+		break;
+		
+		}	
+	
+		System.out.println(monthswitch);
+		
+	}
+}	
