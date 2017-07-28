@@ -1,0 +1,18 @@
+
+public class Catching {
+	public static void main(String x[]){
+		try{
+			Math1 m = new Math1();
+			Math1.div(4, 5);
+		}
+		catch(MyExp w){
+			System.out.println("Please only values");
+		}
+		catch(NumberFormatException q){
+			System.out.println("Please only numeric values");
+		}
+		finally{
+			System.out.println("Test");
+		}
+	}
+}
