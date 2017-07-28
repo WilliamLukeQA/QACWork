@@ -1,0 +1,8 @@
+print(OrchardSprays)
+
+x <- OrchardSprays$decrease
+y <- OrchardSprays$treatment
+
+plot(y,x, col = "Red")
+
+print(max(x))
