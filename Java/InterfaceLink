@@ -1,0 +1,9 @@
+
+public class Link implements InterfaceArray {
+	public void method1(int x,int y){
+		
+	}
+	public void method2(int a){
+		
+	}
+}
