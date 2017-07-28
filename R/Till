@@ -1,0 +1,78 @@
+bill <- as.numeric(readline("Enter the bill amount: "))
+paid <- as.numeric(readline("Enter the amount paid: "))
+
+change = paid - bill
+changetext = paid - bill
+
+if(changetext / 100 >= 1)
+cat(switch(changetext/100,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"),"hundred pounds ")
+changetext = changetext%%100
+
+if(changetext / 10 >= 1)
+cat(switch(changetext/10,"ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"),"pounds ")
+changetext = changetext%%10
+
+if(changetext / 1 >= 1)
+  cat(switch(changetext/10,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"),"pounds ")
+changetext = changetext%%10
+
+
+if (change %/% 50 > 0 ){
+return50 = (change %/% 50)
+cat("£50 = ", return50, " ")
+change = change %% 50 }
+
+if (change %/% 20 > 0 ){
+return20 = (change %/% 20)
+cat("£20 = ", return20, " ")
+change = change %% 20}
+
+if (change %/% 10 > 0 ){
+return10 = (change %/% 10)
+cat("£10 = ", return10, " ")
+change = change %% 10}
+
+if (change %/% 5 > 0 ){
+return5 = (change %/% 5)
+cat("£5 = ", return5, " ")
+change = change %% 5}
+
+if (change %/% 2 > 0 ){
+return2 = (change %/% 2)
+cat("£2 = ", return2, " ")
+change = change %% 2}
+
+if (change %/% 1 > 0 ){
+return1 = (change %/% 1)
+cat("£1 = ", return1, " ")
+change = change %% 1}
+
+if (change %/% 0.5 > 0 ){
+return50p = (change %/% 0.5)
+cat("50p = ", return50p, " ")
+change = change %% 0.5}
+
+if (change %/% 0.2 > 0 ){
+return20p = (change %/% 0.2)
+cat("20p = ", return20p, " ")
+change = change %% 0.2}
+
+if (change %/% 0.1 > 0 ){
+return10p = (change %/% 0.1)
+cat("10p = ", return10p, " ")
+change = change %% 0.1}
+
+if (change %/% 0.05 > 0 ){
+return5p = (change %/% 0.05)
+cat("5p = ", return5p, " ")
+change = change %% 0.05}
+
+if (change %/% 0.02 > 0 ){
+return2p = (change %/% 0.02)
+cat("2p = ", return2p, " ")
+change = change %% 0.02}
+
+if (change %/% 0.01 > 0 ){
+return1p = (change %/% 0.01)
+cat("1p = ", return1p, " ")
+change = change %% 0.01}
