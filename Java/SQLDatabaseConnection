@@ -1,0 +1,31 @@
+package sqldata;
+
+import java.sql.*;
+import java.sql.SQLException;
+
+public class sqltest
+{
+	public static void main(String x[])
+	{
+		try
+		{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection ("jdbc:mysql://localhost:3306/Test","root","password");
+			Statement stm = con.createStatement();
+			ResultSet rs = stm.executeQuery("select * from Testing");
+			while (rs.next())
+			{
+				System.out.println(rs.getString(1) + " " + rs.getString(2));
+				
+			}
+		}
+		catch (ClassNotFoundException e)
+		{
+			System.out.println(e.toString());
+		}
+		catch (SQLException s)
+		{
+			System.out.println(s);
+		}
+	}
+}
