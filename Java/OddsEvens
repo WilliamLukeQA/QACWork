@@ -1,0 +1,33 @@
+
+public class Chart {
+	
+	public static void main (String x[]){
+		int a;
+		a = 1;
+		for (a=1; a<10; a=a+1){		
+		System.out.println(a);
+		
+		if (a%2==0){
+			
+			System.out.println("Evem");
+			if (a>5){
+				System.out.println("-");
+			}
+				else{
+					System.out.println("*");
+				}
+				}
+			else {
+				System.out.println("odd");
+				
+				if (a>5){
+					System.out.println("!");
+				}
+				else {
+					System.out.println("?");
+				}
+			}
+
+	}
+	}
+}
