@@ -1,0 +1,39 @@
+cars <- rxImport("C:\\Users\\Profile\\Desktop\\R\\cars.sas7bdat")
+dfcar <- data.frame(cars) 
+
+asian_rear <- sum(dfcar$Origin == "Asia" & dfcar$DriveTrain == "Rear")
+
+europecar <- dfcar[which(dfcar$Origin=='Europe'),]
+avg <- mean(europecar$Horsepower)
+
+usacar <- dfcar[which(dfcar$Origin=='USA'),]
+usaavg <- mean(usacar$MSRP)
+
+asiacar <- dfcar[which(dfcar$Origin=='Asia'),]
+
+usacar["ratio"] <- usacar$MSRP / usacar$Horsepower
+usaratio <- usacar[order(-usacar$ratio),]
+
+europecar["ratio"] <- europecar$MSRP / europecar$Horsepower
+europeratio <- europecar[order(-europecar$ratio),]
+
+asiacar["ratio"] <- asiacar$MSRP / asiacar$Horsepower
+asiaratio <- asiacar[order(-asiacar$ratio),]
+
+europebmw <- europecar[which(europecar$Make=='BMW'),]
+make <- table(europecar$Model)
+barplot(make, main = "Europe BMW Model count", xlab = "Models")
+
+print("Amount of Asian Cars with Rear drivetrain")
+print(asian_rear)
+print("Average Horsepower in Europe")
+print(avg)
+print("Average Price in USA")
+print(usaavg)
+print("USA Ratio")
+print(usaratio[1,"ratio"])
+print("Europe Ratio")
+print(europeratio[1,"ratio"])
+print("Asia Ratio")
+print(asiaratio[1,"ratio"])
+print(europebmw)
