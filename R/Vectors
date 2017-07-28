@@ -1,0 +1,14 @@
+salary <- c(1700, 1400, 500, 700)
+numbers <- seq(100:1000)
+
+print(salary[1])
+print(numbers[101:110])
+print(salary[salary>1000])
+print(salary[c(T,F)])
+print(sum(salary))
+print(min(salary))
+print(max(salary))
+print(length(salary))
+
+marks <- c("Luke" = 10, "Rich" = 20, "Harvey" = 30)
+print(marks["Luke"])
