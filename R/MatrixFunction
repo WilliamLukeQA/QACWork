@@ -1,0 +1,22 @@
+physics <- c(95,29,68)
+chemistry <- c(89,23,54)
+maths <- c(43,62,27)
+
+results <- cbind(physics,chemistry,maths)
+
+colnames(results)<-c("physics","chemistry","maths")
+rownames(results)<-c("luke","rich","david")
+
+resultfunc <- function(x){
+  R <- sum(x)
+  p <- R*100/150
+    if(p > 60){
+      outcome <- "Pass"
+      return(outcome)
+    }else{
+      outcome <- "Fail"
+      return(outcome)
+    }
+}
+
+print(apply(results,1,resultfunc))
