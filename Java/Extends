@@ -1,0 +1,9 @@
+
+public class ONE extends ABC {
+	public ONE ( int a, int b){
+		System.out.println("1");
+	}
+	public ONE ( int a){
+		System.out.println("2");
+	}
+}
