@@ -1,0 +1,5 @@
+101,maths,67
+101,chemistry,78
+102,maths,56
+102,chemistry,87
+102,physics,69

@@ -1,0 +1,3 @@
+Name|Postcode
+Shafeeq|789
+Tom|420
