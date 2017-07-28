@@ -1,0 +1,16 @@
+import java.util.Arrays;
+
+public class Array {
+	public static void  main (String x[]){
+	int[] array1 = new int [4];
+	Array ar1 = new Array();
+	array1[0] = 5;
+	array1[1] = 10;
+	array1[2] = 20;
+	array1[3] = 15;
+	Arrays.sort(array1);
+	System.out.println(array1[0]);
+	System.out.println(array1[array1.length - 1]);
+	System.out.println(Arrays.toString(array1));
+	}
+}
