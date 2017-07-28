@@ -1,0 +1,23 @@
+number <- as.numeric(readline("Enter a value between 1 and 9999: "))
+
+if ((number/1000) >= 1){
+  cat(switch(number/1000,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"),"thousand ")
+  number = number%%1000 
+}
+
+if ((number/100) >= 1){
+  
+  cat(switch(number/100,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"),"hundred ")
+  number = number%%100
+}
+
+if (number > 10 & number < 20) {
+  cat(switch(number%%10,"eleven", "twelve", "thirteen", "forteen", "fifty", "sixty", "seventy", "eighty", "ninty"))
+} else if(number >= 20 || number == 10) {
+  cat(switch(number/10,"ten", "twenty ", "thirty ", "forty ", "fifty ", "sixty ", "seventy ", "eighty ", "ninty "))
+  number = number%%10
+}
+
+if (number < 9){
+  cat(switch(number,"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"))
+}
