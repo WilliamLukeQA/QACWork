@@ -1,0 +1,13 @@
+
+public class collect {
+	
+	public static void main (String x[]){
+		float Answer;
+			math3 p = new math3();
+			System.out.println(p.Add(10,7));
+			Answer = p.Divide(5,2);
+			System.out.println(Answer);
+			System.out.println(p.Subtract(10,7));
+			System.out.println(p.Multiply(10,7));			
+	}
+}
