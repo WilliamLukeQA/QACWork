@@ -1,0 +1,43 @@
+install.packages("ggplot2")
+
+data = read.csv("C:\\Users\\Profile\\Desktop\\R\\piratebay.csv")
+library(ggplot2) 
+
+df <- data.frame(data)
+df["popularity"] <- df$seeders + df$leechers
+df["ratio"] <- df$seeders / df$leechers
+
+deadseed <- sum(df$seeders == 0)
+deadleecher <- sum(df$leechers == 0)
+deadcount <- deadseed + deadleecher
+
+ratio <- df[order(-df$ratio),]
+popularity <- df[order(-df$popularity),]
+seeder <- df[order(-df$seeders),]
+leechers <- df[order(-df$leechers),]
+
+dropseed <- df[!df$seeders == 0 & !df$leechers == 0,]
+
+
+ggplot(df,aes(size,popularity))+geom_point()
+ggplot(df,aes(category,popularity))+geom_point()
+
+cat <- split(df,df$category)
+ggplot(cat[[1]],aes(size,popularity))+geom_point(color=3,shape=3)
+ggplot(cat[[2]],aes(size,popularity))+geom_point(color=10,shape=8)
+ggplot(cat[[3]],aes(size,popularity))+geom_point(color=1,shape=11)
+ggplot(cat[[4]],aes(size,popularity))+geom_point(color=4,shape=21)
+ggplot(cat[[5]],aes(size,popularity))+geom_point(color=6,shape=25)
+
+
+print("The most popular torrent is")
+print(popularity[1,"idtorrent"])
+print("The torrent with most seeders is")
+print(seeder[1,"idtorrent"])
+print("The torrent with the most leachers is")
+print(leechers[1,"idtorrent"])
+print("The torrent with the highest ratio")
+print(ratio[1,"idtorrent"])
+print("The total of dead torrents is")
+print(deadseed)
+print(dropseed)
