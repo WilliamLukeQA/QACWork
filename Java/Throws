@@ -1,0 +1,13 @@
+
+public class Math1 {
+	public static void div(int a, int b) throws MyExp{
+		a = b = 0;
+			if(a < b){
+				MyExp e = new MyExp();
+				throw e;
+			}
+			else {
+				System.out.print(a / b);
+			}
+	}
+}
