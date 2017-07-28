@@ -1,0 +1,20 @@
+
+public class DrawObj {
+	public static void main (String x[]){
+		Circle c = new Circle();
+		doDrawing(c);
+		
+		Line l = new Line();
+		doDrawing(l);
+		
+		//doDrawing(new Circle());
+		
+		//doDrawing(new Line());
+		
+	}
+	
+	public static void doDrawing(Draw d) {
+		d.Drawing();
+	}
+			
+}
