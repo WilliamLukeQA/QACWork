@@ -1,0 +1,27 @@
+
+public class Bank {
+	static int a;
+	String b="The current rate for";
+	static Bank r;
+	static int Limit = 0;
+	
+	
+	public void MSG(){
+		System.out.println("Hello");
+	}
+	private Bank(){
+		
+	}
+	public static Bank CreateObject(){
+		if (Limit < 3 ){
+			r = new Bank();
+			Limit++;
+			return r;
+		}
+		else
+		{
+			System.out.println("Limit Reached");
+			return null;
+		}
+	}
+}
