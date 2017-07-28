@@ -1,0 +1,22 @@
+
+public class Word {
+	public static void main (String x[]){
+		String sentence = "Who wants to go to Newport";
+		String find = "to";
+		
+		int wordCount = 0;
+		String pos =  "";
+		for(int i = 0; i < sentence.length(); i++) {
+			String tmp = "";
+			if(i + find.length() <= sentence.length()) {	
+				tmp = sentence.substring(i, i + find.length());
+				if(tmp.equals(find)) {
+					wordCount++;
+					pos += i + ", ";
+				}
+			}
+		}		
+		System.out.println("Word Count: " + wordCount);
+		System.out.println("Position: " + pos);
+	}
+}
