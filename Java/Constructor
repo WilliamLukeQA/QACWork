@@ -1,0 +1,11 @@
+
+public class constructor {
+	int x,y;
+	
+	public constructor() {
+		
+		System.out.println("Hello");
+	
+	}
+	
+}
