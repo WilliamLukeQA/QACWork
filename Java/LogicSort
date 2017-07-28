@@ -1,0 +1,36 @@
+
+public class SortingWithLogic {
+	public static void main(String x[]){
+		int first = 0, second = 0, third = 0;
+		int[] array = new int [8];
+		array[0] = 10;
+		array[1] = 100;
+		array[2] = 6;
+		array[3] = 45;
+		array[4] = 38;
+		array[5] = 23;
+		array[6] = 76;
+		array[7] = 34;
+		
+		//int[] array = {10, 100, 6, 45, 38, 23, 76, 34};
+
+		for (int loop = 0; loop < array.length - 1; loop++){
+			if (array[loop] > first){
+				first = array[loop];
+				}
+		}
+		for (int loop2 = 0; loop2 < array.length - 1; loop2++){
+			if (array[loop2] < first && array[loop2] > second){
+				second = array[loop2];
+				}
+		}
+		for (int loop3 = 0; loop3 < array.length - 1; loop3++){
+			if (array[loop3] < second && array[loop3] > third){
+				third = array[loop3];
+				}	
+		}
+		System.out.println("Highest number: " + first);
+		System.out.println("Second huighest number: " + second);
+		System.out.println("Third highest number: " + third);
+	}
+}
