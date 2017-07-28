@@ -1,0 +1,7 @@
+readfile = input("What file do you wish to open?")
+newfile = input("What do you want the new file to be called?")
+wordfind = input("What is the letter in which you want to replace?")
+wordreplace = input("What letter do you want to replace current letter with?")
+
+openfile = open(readfile, "r")
+data = openfile.read()
