@@ -1,0 +1,8 @@
+
+public class Convert {
+    public static void main(String[] args) {
+        String strBinaryNumber = "111000";
+         int decimalNumber = Integer.parseInt(strBinaryNumber,2);
+         System.out.println("Decimal number: " + decimalNumber);      
+}
+}
